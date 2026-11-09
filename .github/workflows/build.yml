@@ -1,7 +1,7 @@
 name: Build IsoForge
 on:
   push:
-    branches: [ main, master ]
+    branches: [ chatgpt, main, master ]
     tags: [ 'v*' ]
   pull_request:
   workflow_dispatch:
