@@ -47,9 +47,9 @@ jobs:
             exit 1
           }
           Get-Item "publish/win-x64/UltraISOStudio.exe" | Select-Object Name, Length, LastWriteTime
-          & "publish/win-x64/UltraISOStudio.exe" --self-test
-          if ($LASTEXITCODE -ne 0) {
-            Write-Error "Engine self-test failed with exit code $LASTEXITCODE"
+          $proc = Start-Process -FilePath "publish/win-x64/UltraISOStudio.exe" -ArgumentList "--self-test" -Wait -NoNewWindow -PassThru
+          if ($proc.ExitCode -ne 0) {
+            Write-Error "Engine self-test failed with exit code $($proc.ExitCode)"
             exit 1
           }
 
