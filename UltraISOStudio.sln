@@ -1,0 +1,18 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltraISOStudio", "src\UltraISOStudio\UltraISOStudio.csproj", "{8F9A2B3C-4D5E-6F7A-8B9C-0D1E2F3A4B5C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F9A2B3C-4D5E-6F7A-8B9C-0D1E2F3A4B5C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8F9A2B3C-4D5E-6F7A-8B9C-0D1E2F3A4B5C}.Debug|x64.Build.0 = Debug|Any CPU
+		{8F9A2B3C-4D5E-6F7A-8B9C-0D1E2F3A4B5C}.Release|x64.ActiveCfg = Release|Any CPU
+		{8F9A2B3C-4D5E-6F7A-8B9C-0D1E2F3A4B5C}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
