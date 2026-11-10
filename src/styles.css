@@ -1,0 +1,77 @@
+@import "tailwindcss";
+@import "@fontsource/ibm-plex-sans/latin-400.css";
+@import "@fontsource/ibm-plex-sans/latin-500.css";
+@import "@fontsource/ibm-plex-sans/latin-600.css";
+@import "@fontsource/ibm-plex-sans/cyrillic-400.css";
+@import "@fontsource/ibm-plex-sans/cyrillic-500.css";
+@import "@fontsource/ibm-plex-sans/cyrillic-600.css";
+@import "@fontsource/ibm-plex-mono/latin-400.css";
+@import "@fontsource/ibm-plex-mono/latin-500.css";
+@import "@fontsource/ibm-plex-mono/cyrillic-400.css";
+@import "@fontsource/ibm-plex-mono/cyrillic-500.css";
+
+@theme {
+  --font-sans: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --color-bg: #141614;
+  --color-surface: #1c1f1c;
+  --color-raised: #262a26;
+  --color-inset: #101210;
+  --color-fg: #ebe7dc;
+  --color-muted: #9c988c;
+  --color-accent: #e0a45a;
+  --color-on-accent: #1c140c;
+  --color-line: #3a4038;
+  --color-danger: #e07a62;
+  --color-ok: #8faf78;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 1px;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-accent) 35%, transparent);
+  }
+}
+
+@keyframes arca-slide {
+  from {
+    transform: translateX(-70%);
+  }
+  to {
+    transform: translateX(240%);
+  }
+}
+
+.arca-indet {
+  animation: arca-slide 1.1s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
